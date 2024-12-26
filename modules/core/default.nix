@@ -16,7 +16,5 @@
     ./users.nix
     ./zram.nix
     ./zsh.nix
-
-    #./hardening.nix
    ];
 }
