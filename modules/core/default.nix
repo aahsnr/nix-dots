@@ -14,7 +14,9 @@
     #./polkit.nix
     #./system.nix
     ./users.nix
+    ./zram.nix
     ./zsh.nix
+
     #./hardening.nix
    ];
 }
