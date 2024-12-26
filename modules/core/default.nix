@@ -3,7 +3,9 @@
 {
   imports = [
     ./bootloader.nix
-    ./bluetooth.nix
+    ./console.nix
+    #./bluetooth.nix
+    ./i18n.nix
     ./flatpak.nix
     ./network.nix
     ./packages.nix
