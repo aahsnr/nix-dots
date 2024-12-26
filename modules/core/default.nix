@@ -6,6 +6,7 @@
     ./console.nix
     #./bluetooth.nix
     ./i18n.nix
+    ./locale.nix
     #./flatpak.nix
     #./network.nix
     ./packages.nix
