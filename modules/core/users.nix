@@ -6,14 +6,18 @@
     isNormalUser = true;
     description = "Ahsanur Rahman";
     extraGroups = [ 
-      "networkmanager" 
       "wheel"
-      "systemd-journal"
       "audio"
       "video"
       "input"
-      "power"
-      "nix"
+      "network"
+      "networkmanager"
+      "plugdev"
+      "libvirtd"
+      "mysql"
+      "docker"
+      "podman"
+      "git"
     ];
     useDefaultShell = true;
     shell = pkgs.zsh;

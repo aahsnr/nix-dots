@@ -1,10 +1,10 @@
 { config, pkgs, lib, inputs, ... }:
 
 {
-  environment = {
-    systemPackages = [pkgs.git];
-    defaultPackages = [];
-  };
+  # environment = {
+  #   systemPackages = [pkgs.git];
+  #   defaultPackages = [];
+  # };
 
   nix = {
     gc = {
@@ -13,7 +13,6 @@
       options = "--delete-older-than 3d";
     };
     package = pkgs.nixVersions.git; 
-    #package = pkgs.nixFlakes;
 
     # Make builds run with low priority so my system stays responsive
     daemonCPUSchedPolicy = "idle";
@@ -24,7 +23,7 @@
 
     # This will additionally add your inputs to the system's legacy channels
     # Making legacy nix commands consistent as well, awesome!
-   nixPath = lib.mapAttrsToList (key: value: "${key}=${value.to.path}") config.nix.registry;
+    nixPath = lib.mapAttrsToList (key: value: "${key}=${value.to.path}") config.nix.registry;
 
     # Free up to 1GiB whenever there is less than 100MiB left.
     extraOptions = ''
