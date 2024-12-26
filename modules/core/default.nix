@@ -8,10 +8,11 @@
     ./i18n.nix
     ./locale.nix
     #./flatpak.nix
-    #./network.nix
+    ./fonts.nix
+    ./network.nix
     ./packages.nix
     ./nix.nix
-    #./polkit.nix
+    ./polkit.nix
     #./system.nix
     ./users.nix
     ./zram.nix

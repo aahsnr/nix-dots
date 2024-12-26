@@ -1,10 +1,10 @@
 { config, pkgs, lib, inputs, ... }:
 
 {
-  # environment = {
-  #   systemPackages = [pkgs.git];
-  #   defaultPackages = [];
-  # };
+  environment = {
+    systemPackages = [pkgs.git];
+    defaultPackages = [];
+  };
 
   nix = {
     gc = {
