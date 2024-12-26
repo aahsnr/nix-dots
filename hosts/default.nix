@@ -5,12 +5,11 @@ let
   bootloader = ../modules/core/bootloader.nix;
   core = ../modules/core;
   #emacs = ../modules/emacs;
-  nvidia = ../modules/nvidia;
+  #nvidia = ../modules/nvidia;
   wayland = ../modules/wayland;
   laptop = nixos-hardware.nixosModules.asus-zephyrus-ga401;
   chaotic_nix = chaotic.homeManagerModules.default;
   pkgs = inputs.nixpkgs.legacyPackages.x86_64-linux;
-  asztal = pkgs.callPackage ../modules/ags { inherit inputs; };
   hmModule = inputs.home-manager.nixosModules.home-manager;
   /* doom_emacs = nix-doom-emacs.hmModule; */
 
@@ -22,7 +21,6 @@ let
     extraSpecialArgs = {
       inherit inputs;
       inherit self;
-      inherit asztal;
       inherit chaotic_nix;
     };
     users.ahsan = {
@@ -43,7 +41,7 @@ in {
         ./workstation/hardware-configuration.nix
         bootloader
         #emacs
-        nvidia
+        #nvidia
         wayland
         hmModule
         {inherit home-manager;}
@@ -60,7 +58,7 @@ in {
         {networking.hostName = "zephyrus";}
         ./zephyrus/hardware-configuration.nix
         bootloader
-        nvidia
+        #nvidia
         wayland
         hmModule
         laptop

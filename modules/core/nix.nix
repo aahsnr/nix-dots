@@ -12,7 +12,7 @@
       dates = "daily";
       options = "--delete-older-than 3d";
     };
-    package = pkgs.nixUnstable; 
+    package = pkgs.nixVersions.git; 
     #package = pkgs.nixFlakes;
 
     # Make builds run with low priority so my system stays responsive
@@ -46,10 +46,10 @@
       #cores = 12;
       keep-going = true;
       log-lines = 50;
-      system-features = [
-        "big-parallel" 
-        "gccarch-alderlake"
-      ];
+      # system-features = [
+      #   "big-parallel" 
+      #   "gccarch-alderlake"
+      # ];
       substituters = [
         "https://cache.nixos.org"
         "https://nix-community.cachix.org"
@@ -83,8 +83,6 @@
     overlays = with inputs; [
       rust-overlay.overlays.default
       nur.overlay
-      emacs.overlay 
-      nix-doom-emacs
     ];
 
     # hostPlatform = { 
@@ -104,6 +102,6 @@
 
   system = {
     autoUpgrade.enable = true;
-    stateVersion = "24.05";
+    stateVersion = "25.05";
   };
 }

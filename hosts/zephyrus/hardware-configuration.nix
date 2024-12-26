@@ -8,76 +8,26 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  boot.initrd.luks.devices.luksroot = {
-    device = "/dev/disk/by-label/cryptroot";
-    preLVM = true;
-    allowDiscards = true;
-  };
-
-  boot.initrd.availableKernelModules =
-    [
-      "xhci_pci"
-      "thunderbolt"
-      "nvme"
-      "usb_storage"
-      "sd_mod"
-      "usbhid"
-    ]
-    ++ config.boot.initrd.luks.cryptoModules;
-
-  boot.initrd.kernelModules = [ "dm-snapshot" ];
+  boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "usbhid" "usb_storage" "uas" "sd_mod" ];
+  boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-label/root";
-      fsType = "btrfs";
-      options = [ "subvol=@" "noatime" "compress=zstd" "space_cache=v2" "ssd" "discard=async" ];
+    { device = "/dev/disk/by-uuid/0d7f73a0-cd41-4155-a259-82b0e88d77b6";
+      fsType = "ext4";
     };
 
-  fileSystems."/home" =
-    { device = "/dev/disk/by-label/root";
-      fsType = "btrfs";
-      options = [ "subvol=@home" "noatime" "compress=zstd" "space_cache=v2" "ssd" "discard=async" ];
-    };
-
-  fileSystems."/tmp" =
-    { device = "/dev/disk/by-label/root";
-      fsType = "btrfs";
-      options = [ "subvol=@tmp" "noatime" "compress=zstd" "space_cache=v2" "ssd" "discard=async" ];
-    };
-
-  fileSystems."/var" =
-    { device = "/dev/disk/by-label/root";
-      fsType = "btrfs";
-      options = [ "subvol=@var" "noatime" "compress=zstd" "space_cache=v2" "ssd" "discard=async" ];
-    };
-
-  fileSystems."/var/log" =
-    { device = "/dev/disk/by-label/root";
-      fsType = "btrfs";
-      options = [ "subvol=@log" "noatime" "compress=zstd" "space_cache=v2" "ssd" "discard=async" ];
-    };
-
-  fileSystems."/var/log/audit" =
-    { device = "/dev/disk/by-label/root";
-      fsType = "btrfs";
-      options = [ "subvol=@audit" "noatime" "compress=zstd" "space_cache=v2" "ssd" "discard=async" ];
-    };
-
-  fileSystems."/nix" =
-    { device = "/dev/disk/by-label/root";
-      fsType = "btrfs";
-      options = [ "subvol=@nix" "noatime" "compress=zstd" "space_cache=v2" "ssd" "discard=async" ];
-    };
+  boot.initrd.luks.devices."luks-c65524d9-f240-4aa0-8c40-dd4bfa4730a6".device = "/dev/disk/by-uuid/c65524d9-f240-4aa0-8c40-dd4bfa4730a6";
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-label/boot";
+    { device = "/dev/disk/by-uuid/074B-1B40";
       fsType = "vfat";
+      options = [ "fmask=0077" "dmask=0077" ];
     };
 
   swapDevices =
-    [ { device = "/dev/disk/by-label/swap"; }
+    [ { device = "/dev/disk/by-uuid/7835f0a3-bcc9-4bc9-ab04-0d3adf890dcb"; }
     ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
@@ -88,6 +38,7 @@
   # networking.interfaces.enp4s0f4u2u3.useDHCP = lib.mkDefault true;
   # networking.interfaces.wlp2s0.useDHCP = lib.mkDefault true;
 
-  nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
+
+  nixpkgs.hostPlatform =  "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }

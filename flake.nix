@@ -55,15 +55,6 @@
       inputs.rust-overlay.follows = "rust-overlay";
     };
     
-    emacs = {
-      url = "github:nix-community/emacs-overlay";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    nix-doom-emacs = {
-      url = "github:nix-community/nix-doom-emacs";
-      inputs.emacs.follows = "emacs";
-    };
   };
   outputs = { 
     self, 
@@ -71,19 +62,15 @@
     chaotic, 
     home-manager, 
     anyrun, 
-    emacs, 
-    nix-doom-emacs, 
     ...
 
     } @ inputs: let
     system = "x86_64-linux";
     pkgs = inputs.nixpkgs.legacyPackages.x86_64-linux;
-    asztal = pkgs.callPackage ./modules/ags { inherit inputs; };
   in {
     nixosConfigurations = import ./hosts inputs;
 
     packages.${system} = {
-      default = asztal;
       #catppuccin-folders = pkgs.callPackage ./pkgs/catppuccin-folders.nix {};
       #catppuccin-gtk = pkgs.callPackage ./pkgs/catppuccin-gtk.nix {};
       #catppuccin-cursors = pkgs.callPackage ./pkgs/catppuccin-cursors.nix {};

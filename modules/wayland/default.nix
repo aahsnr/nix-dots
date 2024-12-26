@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./fonts.nix 
+    #./fonts.nix 
     ./services.nix
   ];
   
@@ -47,7 +47,6 @@
   hardware = {
     opengl = {
       enable = true;
-      driSupport = true;
       extraPackages = with pkgs; [
         vaapiVdpau
         libvdpau-va-gl
@@ -65,9 +64,5 @@
     ];
   };
 
-  sound = {
-    enable = true;
-    mediaKeys.enable = true;
-  };
 
 }

@@ -14,18 +14,17 @@
   imports = [
     ./alacritty
     #./anyrun
-    ./ags_setup.nix
+    #./ags_setup.nix
     ./dev.nix
-    ./emacs
-    /git
-    ./gtk 
-    ./hyprland
+    #./emacs
+    ./git
+    #./hyprland
     #./mako
     ./mpv
-    ./nvim
+    #./nvim
     ./starship
     ./tools
-    ./gtk
+    #./gtk
     ./texlive
     ./zsh
     ./zathura

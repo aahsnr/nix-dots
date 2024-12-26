@@ -18,6 +18,6 @@
     useDefaultShell = true;
     shell = pkgs.zsh;
     initialPassword = "changeme";    
-    packages = with pkgs; [ ];
+    packages = with pkgs; [ git ];
   };
 }

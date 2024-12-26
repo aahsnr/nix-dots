@@ -9,9 +9,9 @@
     ./packages.nix
     ./nix.nix
     ./polkit.nix
-    ./system.nix
+    #./system.nix
     ./users.nix
     ./zsh.nix
-    ./hardening.nix
+    #./hardening.nix
    ];
 }
