@@ -16,22 +16,22 @@
 
   };
 
-  imports = [
-    ./alacritty
-    #./anyrun
-    #./ags_setup.nix
-    ./dev.nix
-    #./emacs
-    ./git
-    #./hyprland
-    #./mako
-    ./mpv
-    #./nvim
-    ./starship
-    ./tools
-    #./gtk
-    ./texlive
-    ./zsh
-    ./zathura
-  ];
+  # imports = [
+  #   ./alacritty
+  #   #./anyrun
+  #   #./ags_setup.nix
+  #   ./dev.nix
+  #   #./emacs
+  #   ./git
+  #   #./hyprland
+  #   #./mako
+  #   ./mpv
+  #   #./nvim
+  #   ./starship
+  #   ./tools
+  #   #./gtk
+  #   ./texlive
+  #   ./zsh
+  #   ./zathura
+  # ];
 }
