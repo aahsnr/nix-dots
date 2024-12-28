@@ -72,17 +72,12 @@ in {
     gnumake
     chkrootkit
     killall
-    vulkan-loader
-    vulkan-validation-layers
-    vulkan-tools
-    nvidia-vaapi-driver
     tealdeer
     tree
     openssl
     cmake
     gnumake
     element-desktop
-    alacritty
     insync
     kitty
     lutris
@@ -97,7 +92,6 @@ in {
     ripgrep
     ffmpeg
     pymol
-    xournalpp
     imagemagick
     deluge
     fd
@@ -109,6 +103,8 @@ in {
     lsd
     btop
     gh
+    xournalpp
+
   ];
 
 }
