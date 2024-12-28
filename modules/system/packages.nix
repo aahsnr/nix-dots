@@ -53,16 +53,9 @@ in {
     #   setuptools
     #   #tensorflowWithCuda
     # ]))
-    xfce.thunar
-    xfce.exo
-    xfce.xfconf
-    xfce.tumbler
-    xfce.catfish
-    xfce.thunar-volman
-    xfce.thunar-media-tags-plugin
-    xfce.thunar-archive-plugin
     #gccoptimized
     cachix
+    cmake
     wget
     lazygit
     linux-firmware
@@ -75,36 +68,31 @@ in {
     tealdeer
     tree
     openssl
-    cmake
     gnumake
     element-desktop
     insync
-    kitty
     lutris
-    brave
-    fastfetch
     lsd
     git
     cached-nix-shell 
+    fastfetch
+    fd
+    ffmpeg
     fzf
     lynis
     unzip
     ripgrep
-    ffmpeg
     pymol
     imagemagick
     deluge
-    fd
     jq
     networkmanagerapplet
     lm_sensors
-    catppuccin-gtk
     lynis
     lsd
     btop
     gh
     xournalpp
-
   ];
 
 }

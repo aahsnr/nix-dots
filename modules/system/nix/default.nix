@@ -81,7 +81,7 @@
 
     overlays = with inputs; [
       rust-overlay.overlays.default
-      nur.overlay
+      nur.overlays.default
     ];
 
     # hostPlatform = { 
