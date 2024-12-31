@@ -2,7 +2,7 @@
 
 let
   inputs = self.inputs;
-  bootloader = ../modules/core/bootloader.nix;
+  bootloader = ..modules/system/kernel/bootloader.nix;
   core = ../modules/core;
   #emacs = ../modules/emacs;
   #nvidia = ../modules/nvidia;

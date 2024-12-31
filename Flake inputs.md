@@ -17,4 +17,7 @@
 - [ ] hyprland-plugins
 - [ ] hyprlock
 - [ ] hypridle
-- [ ] 
+
+## TODO
+- [ ] add yazi flake input
+- [ ] fix booloader.nix location

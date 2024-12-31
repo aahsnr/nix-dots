@@ -177,7 +177,10 @@
   },
   "active": "7d0eb73384985770",
   "lastOpenFiles": [
+    "hosts/default.nix~",
     "flake.nix~",
+    "modules/system/hardware/default.nix~",
+    "modules/system/fonts/default.nix",
     "theme/wall.png",
     "Flake inputs.md"
   ]

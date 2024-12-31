@@ -106,7 +106,8 @@
     };
       
     xdg-portal-hyprland.url = "github:hyprwm/xdg-desktop-portal-hyprland";
-
+    
+    yazi.url = "github:sxyazi/yazi";
 
   };
 
