@@ -33,7 +33,6 @@ let
       SQLAlchemy = python-super.SQLAlchemy.overridePythonAttrs (oldAttrs: {
         doCheck = false; doInstallCheck = false;
       });
-      
     };
   };
 
