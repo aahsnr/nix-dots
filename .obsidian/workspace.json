@@ -177,12 +177,17 @@
   },
   "active": "7d0eb73384985770",
   "lastOpenFiles": [
-    "flake.nix~",
-    "modules/home/anyrun/default.nix~",
-    "modules/system/packages/default.nix~",
-    "hosts/default.nix~",
-    "modules/system/hardware/default.nix~",
-    "modules/system/fonts/default.nix",
+    "modules/system/services/greetd.nix~",
+    "modules/system/services/greetd.nix",
+    "modules/system/services/default.nix~",
+    "modules/system/services/misc.nix~",
+    "modules/system/services/pipewire.nix~",
+    "modules/system/services/misc.nix",
+    "modules/system/services/pipewire.nix",
+    "modules/system/services/seatd.nix~",
+    "modules/system/services/seatd.nix",
+    "modules/system/services/polkit.nix~",
+    "modules/system/services/polkit.nix",
     "theme/wall.png",
     "Flake inputs.md"
   ]

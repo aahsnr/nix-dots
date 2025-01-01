@@ -23,3 +23,5 @@
 - [x] fix booloader.nix location
 - [ ] Fix nvidia module
 - [ ] Add hyprland & accessories modules 
+- [ ] fix polkit
+- [ ] setup greetd and regreet
