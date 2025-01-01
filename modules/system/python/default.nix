@@ -1,7 +1,7 @@
 { config, pkgs,  ... }:
 
 let
-  python311optimized = pkgs.python311.override {
+  python312optimized = pkgs.python312.override {
     self = python311optimized;
     enableOptimizations = true;
     reproducibleBuild = false;
@@ -28,20 +28,18 @@ let
 
 in {
   environment.systemPackages = with pkgs; [
-    (python311optimized.withPackages (p: with p; [
+    (python312optimized.withPackages (p: with p; [
       pandas
       numpy
       scipy
       keras
-      #scikit-learn
+      scikit-learn
       cython_3
       jupyter
       pyarrow
       pip
       setuptools
       #tensorflowWithCuda
-
     ]))
   ];
-
 }

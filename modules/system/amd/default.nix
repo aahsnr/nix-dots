@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./amd.nix
+    ./cpu.nix
     #./intel.nix
    ];
 }
