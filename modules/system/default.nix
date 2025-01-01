@@ -2,13 +2,14 @@
 
 {
   imports = [
-    ./bootloader.nix
+    ./kernel
     ./console.nix
     #./bluetooth.nix
+    ./hardware
     ./i18n.nix
     ./locale.nix
     #./flatpak.nix
-    ./fonts.nix
+    ./fonts
     ./network.nix
     ./packages.nix
     ./nix.nix

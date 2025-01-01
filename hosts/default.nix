@@ -2,8 +2,8 @@
 
 let
   inputs = self.inputs;
-  bootloader = ..modules/system/kernel/bootloader.nix;
-  core = ../modules/core;
+  bootloader = ../modules/system/kernel/bootloader.nix;
+  system = ../modules/system;
   #emacs = ../modules/emacs;
   #nvidia = ../modules/nvidia;
   wayland = ../modules/wayland;
@@ -12,7 +12,7 @@ let
   pkgs = inputs.nixpkgs.legacyPackages.x86_64-linux;
   hmModule = inputs.home-manager.nixosModules.home-manager;
 
-  shared = [core];
+  shared = [system];
 
   home-manager = {
     useUserPackages = true;
