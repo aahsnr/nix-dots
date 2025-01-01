@@ -19,5 +19,6 @@
 - [ ] hypridle
 
 ## TODO
-- [ ] add yazi flake input
-- [ ] fix booloader.nix location
+- [x] add yazi flake input
+- [x] fix booloader.nix location
+- [ ] Fix nvidia module

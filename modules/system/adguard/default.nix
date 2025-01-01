@@ -1,3 +1,5 @@
+{ config, ... }:
+{
   services.adguardhome = {
     enable = true;
     settings = {
@@ -33,4 +35,4 @@
       ];
     };
   };
-
+}
