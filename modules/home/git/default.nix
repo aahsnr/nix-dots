@@ -1,8 +1,6 @@
+{ pkgs, config, ... }: 
+
 {
-  pkgs,
-  config,
-  ...
-}: {
   programs.git = {
     enable = true;
     package = pkgs.gitFull;
@@ -23,7 +21,7 @@
     extraConfig = {
       credential.helper = "${pkgs.gitFull}/bin/git-credential-libsecret";
 
-      init.defaultBranch = "main";
+      init.defaultBranch = "master";
       branch.autosetupmerge = "true";
       pull.ff = "only";
       color.ui = "auto";

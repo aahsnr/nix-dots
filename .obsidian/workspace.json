@@ -25,12 +25,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Flake inputs.md",
+                "file": "nixos-todos.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Flake inputs"
+              "title": "nixos-todos"
             }
           }
         ],
@@ -177,8 +177,10 @@
   },
   "active": "7d0eb73384985770",
   "lastOpenFiles": [
-    "hosts/default.nix~",
     "flake.nix~",
+    "modules/home/anyrun/default.nix~",
+    "modules/system/packages/default.nix~",
+    "hosts/default.nix~",
     "modules/system/hardware/default.nix~",
     "modules/system/fonts/default.nix",
     "theme/wall.png",

@@ -35,6 +35,13 @@
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
     };
+    hyprland-protocols = {
+      url = "github:hyprwm/hyprland-protocols";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        systems.follows = "systems";
+      };
+    };
     hypridle = {
       url = "github:hyprwm/hypridle";
       inputs = {
@@ -65,6 +72,18 @@
     Hyprspace = {
       url = "github:KZDKM/Hyprspace";
       inputs.hyprland.follows = "hyprland";
+    };
+    hyprsunset = {
+      url = "github:hyprwm/hyprsunset";
+      inputs = {
+      };
+    };
+    hyprwayland-scanner = {
+      url = "github:hyprwm/hyprwayland-scanner";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        systems.follows = "systems";
+      };
     };
     hy3 = {
       url = "github:outfoxxed/hy3"; 
@@ -105,10 +124,21 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
       
-    xdg-portal-hyprland.url = "github:hyprwm/xdg-desktop-portal-hyprland";
-    
-    yazi.url = "github:sxyazi/yazi";
+    xdg-portal-hyprland = {
+      url = "github:hyprwm/xdg-desktop-portal-hyprland";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.hyprland.follows = "hyprland"
+    };
 
+    yazi = {
+      url = "github:sxyazi/yazi";
+      inputs.nixpkgs.follows = "nixpkgs";
+    }; 
+
+    zen-browser = {
+      url = "github:youwen5/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { anyrun, home-manager, nixpkgs, self, yazi,  ... }@inputs: 

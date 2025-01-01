@@ -22,3 +22,4 @@
 - [x] add yazi flake input
 - [x] fix booloader.nix location
 - [ ] Fix nvidia module
+- [ ] Add hyprland & accessories modules 

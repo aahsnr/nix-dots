@@ -26,6 +26,7 @@ let
 in {
   environment.systemPackages = with pkgs; [
     #gccoptimized
+    bitwarden-desktop
     bleachbit
     brave
     btop
@@ -50,14 +51,20 @@ in {
     lutris
     lynis
     nodejs
+    notesnook
+    obsidian
+    onlyoffice-desktopeditors
     openssl
     pymol
     ripgrep
+    standardnotes
     tealdeer
     tree
     typescript
     unzip
     wget
     xournalpp
+    zotero
+    inputs.zen-browser.packages.${pkgs.system}.default
   ];
 }
