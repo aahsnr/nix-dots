@@ -4,11 +4,11 @@ precision mediump float;
 varying vec2 v_texcoord;
 uniform sampler2D tex;
 
-const float temperature = 4500.0;
+const float temperature = 5000.0;
 const float temperatureStrength = 1.0;
 
 #define WithQuickAndDirtyLuminancePreservation
-const float LuminancePreservationFactor = 1.0;
+const float LuminancePreservationFactor = 1.5;
 
 // function from https://www.shadertoy.com/view/4sc3D7
 // valid from 1000 to 40000 K (and additionally 0 for pure full white)

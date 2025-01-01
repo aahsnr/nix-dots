@@ -16,26 +16,6 @@ let
     reproducibleBuild = false;
   };
 
-  python311optimized = pkgs.python311.override {
-    self = python311optimized;
-    enableOptimizations = true;
-    reproducibleBuild = false;
-    packageOverrides = python-self: python-super: {
-      curio = python-super.curio.overridePythonAttrs (oldAttrs: {
-        doCheck = false; doInstallCheck = false;
-      });
-      cffi = python-super.cffi.overridePythonAttrs (oldAttrs: {
-        doCheck = false; doInstallCheck = false;
-      });
-      websockets = python-super.websockets.overridePythonAttrs (oldAttrs: {
-        doCheck = false; doInstallCheck = false;
-      });
-      SQLAlchemy = python-super.SQLAlchemy.overridePythonAttrs (oldAttrs: {
-        doCheck = false; doInstallCheck = false;
-      });
-    };
-  };
-
   # elfutils = pkgs.elfutils.override {
   #   doCheck = false;
   #   doInstallCheck = false;
@@ -45,53 +25,39 @@ let
 
 in {
   environment.systemPackages = with pkgs; [
-    # (python311optimized.withPackages (p: with p; [
-    #   cython_3
-    #   jupyter
-    #   pip
-    #   setuptools
-    #   #tensorflowWithCuda
-    # ]))
     #gccoptimized
-    cachix
-    cmake
-    wget
-    lazygit
-    linux-firmware
-    btop
     bleachbit
-    fd
-    gnumake
+    brave
+    btop
+    cached-nix-shell
+    cachix
+    cargo
     chkrootkit
-    killall
-    tealdeer
-    tree
-    openssl
-    gnumake
+    cmake
+    deluge-gtk
     element-desktop
-    insync
-    lutris
-    lsd
-    git
-    cached-nix-shell 
     fastfetch
     fd
     ffmpeg
     fzf
-    lynis
-    unzip
-    ripgrep
-    pymol
+    gnumake
     imagemagick
-    deluge
     jq
-    networkmanagerapplet
+    killall
+    linux-firmware
     lm_sensors
-    lynis
     lsd
-    btop
-    gh
+    lutris
+    lynis
+    nodejs
+    openssl
+    pymol
+    ripgrep
+    tealdeer
+    tree
+    typescript
+    unzip
+    wget
     xournalpp
   ];
-
 }
