@@ -11,7 +11,6 @@ let
   chaotic_nix = chaotic.homeManagerModules.default;
   pkgs = inputs.nixpkgs.legacyPackages.x86_64-linux;
   hmModule = inputs.home-manager.nixosModules.home-manager;
-  /* doom_emacs = nix-doom-emacs.hmModule; */
 
   shared = [core];
 
