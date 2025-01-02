@@ -1,4 +1,4 @@
-{ config, lib, ...}: let
+{ config, lib, pkgs, ...}: let
   inherit (lib) mkIf mkDefault versionOlder;
 
   # Use the latest possible nvidia package

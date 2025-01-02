@@ -1,6 +1,6 @@
 {
   imports = [
     ./bootloader.nix
-    ./kernel.nix
+    #./kernel.nix
   ];
 }
