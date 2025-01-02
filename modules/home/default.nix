@@ -19,6 +19,30 @@
   programs.home-manager.enable = true;
 
   imports = [
-  
+    ./anyrun
+    ./bat
+    ./cliphist
+    ./dev
+    ./eza
+    ./fastfetch
+    ./fzf
+    ./git
+    ./gpg
+    ./hypridle
+    ./hyprland
+    ./hyprlock
+    ./hyprpaper
+    ./kitty
+    ./lazygit
+    ./mpv
+    ./rofi
+    ./starship
+    ./tealdeer
+    ./texlive
+    ./theming
+    ./yazi
+    ./zathura
+    ./zoxide
+    ./zsh
   ];
 }
