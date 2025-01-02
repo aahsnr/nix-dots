@@ -1,14 +1,11 @@
 { config, pkgs, inputs, ... }: 
 
 {
-  imports = [
-    ./services.nix
-  ];
-  
+ 
   nixpkgs.overlays = with inputs; [nixpkgs-wayland.overlay];
-  environment.etc."greetd/environments".text = ''
-    Hyprland
-  '';
+  # environment.etc."greetd/environments".text = ''
+  #   Hyprland
+  # '';
 
   environment = {
     variables = {
@@ -42,26 +39,4 @@
       eval $(gnome-keyring-daemon --start --components=ssh)
     '';
   };
-
-  hardware = {
-    opengl = {
-      enable = true;
-      extraPackages = with pkgs; [
-        vaapiVdpau
-        libvdpau-va-gl
-        xwayland
-      ];
-    };
-  };
-
-  xdg.portal = {
-    enable = true;
-    wlr.enable = false;
-    extraPortals = [
-      pkgs.xdg-desktop-portal-gtk
-      inputs.xdg-portal-hyprland.packages.${pkgs.system}.default
-    ];
-  };
-
-
 }

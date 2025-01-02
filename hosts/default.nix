@@ -2,11 +2,7 @@
 
 let
   inputs = self.inputs;
-  bootloader = ../modules/system/kernel/bootloader.nix;
   system = ../modules/system;
-  #emacs = ../modules/emacs;
-  #nvidia = ../modules/nvidia;
-  wayland = ../modules/wayland;
   laptop = nixos-hardware.nixosModules.asus-zephyrus-ga401;
   chaotic_nix = chaotic.homeManagerModules.default;
   pkgs = inputs.nixpkgs.legacyPackages.x86_64-linux;
@@ -38,10 +34,7 @@ in {
       [
         {networking.hostName = "workstation";}
         ./workstation/hardware-configuration.nix
-        bootloader
-        #emacs
-        #nvidia
-        wayland
+        system
         hmModule
         {inherit home-manager;}
       ]
@@ -55,13 +48,9 @@ in {
     modules =
       [
         {networking.hostName = "zephyrus";}
-        ./zephyrus/hardware-configuration.nix
-        bootloader
-        #nvidia
-        wayland
+        system
         hmModule
         laptop
-        #emacs 
         {inherit home-manager;}
       ]
       ++shared;

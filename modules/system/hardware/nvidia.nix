@@ -48,8 +48,12 @@ in {
       modesetting.enable = true;
     };
     opengl = {
+      enable = true;
       setLdLibraryPath = true;
       extraPackages = with pkgs; [
+        vaapiVdpau
+        libvdpau-va-gl
+        xwayland
         nvidia-vaapi-driver
       ];
     };

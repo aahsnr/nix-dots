@@ -9,7 +9,7 @@
   };
 
   imports = [
-    ./env.nix
+    # ./env.nix
     ./settings.nix
     ./keybindings.nix
     ./misc.nix

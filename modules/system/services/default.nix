@@ -1,6 +1,6 @@
 {
   imports = [
-    ./greetd.nix
+    #./greetd.nix
     ./misc.nix
     ./pipewire.nix
     ./polkit.nix
