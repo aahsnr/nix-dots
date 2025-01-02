@@ -127,7 +127,7 @@
     xdg-portal-hyprland = {
       url = "github:hyprwm/xdg-desktop-portal-hyprland";
       inputs.nixpkgs.follows = "nixpkgs";
-      inputs.hyprland.follows = "hyprland"
+      inputs.hyprland.follows = "hyprland";
     };
 
     yazi = {
